@@ -1,3 +1,6 @@
 # ninja log v5
-0	12	1700592491401153191	CMakeFiles/airport_graphs_simulator.dir/main.c.o	a3b0e5f07402125e
-12	29	1700592491417153291	airport_graphs_simulator	3d309a8049fbe3ea
+22	36	1700606203592896604	airport_graphs_simulator	1b8fa75d297ded46
+0	21	1700606203580896581	CMakeFiles/airport_graphs_simulator.dir/main.c.o	a3b0e5f07402125e
+0	11	1700607194699999073	build.ninja	a5718c0a539b5229
+0	25	1700598417541008865	CMakeFiles/airport_graphs_simulator.dir/files/readFile.c.o	c91e5feabfd9e89
+1	19	1700606203576896572	CMakeFiles/airport_graphs_simulator.dir/entities/airports/airports.c.o	b3e86004978a6673
