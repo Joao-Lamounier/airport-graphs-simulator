@@ -10,4 +10,8 @@ add_executable(airport_graphs_simulator
         files/readFile.c
         files/readFile.h
         structures/vertex/vertex.c
-        structures/vertex/vertex.h)
+        structures/vertex/vertex.h
+        entities/routes/routes.c
+        entities/routes/routes.h
+        entities/flights/flights.c
+        entities/flights/flights.h)

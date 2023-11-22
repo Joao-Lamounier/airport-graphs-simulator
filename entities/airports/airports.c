@@ -11,17 +11,17 @@ Airport newAirport(char code[3], int timezone, int latitude, int longitude, char
     airport->longitude = longitude;
     airport->city = city;
     airport->state = state;
-    airport->print_airport = toString;
+    airport->toString = printAirport;
     return airport;
 }
 
-void toString(Airport airport) {
-    printf("Airport Code: %s\n", airport->code);
-    printf("Timezone: %d\n", airport->timezone);
-    printf("Latitude: %d\n", airport->latitude);
-    printf("Longitude: %d\n", airport->longitude);
-    printf("City: %s\n", airport->city);
-    printf("State: %s\n", airport->state);
+void printAirport(Airport airport) {
+    printf("🔢 Código: %s\n", airport->code);
+    printf("🕒 Fuso Horário: %d\n", airport->timezone);
+    printf("🌐 Latitude: %d\n", airport->latitude);
+    printf("🌐 Longitude: %d\n", airport->longitude);
+    printf("📍 Cidade: %s\n", airport->city);
+    printf("📍 Estado: %s\n", airport->state);
 }
 
 void newAirports(Airport airports[MAX_AIRPORTS]) {

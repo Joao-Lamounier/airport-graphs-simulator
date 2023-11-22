@@ -13,15 +13,15 @@ typedef struct _Airport {
     char *city;
     char *state;
 
-    void (*print_airport)(struct _Airport*);
+    void (*toString)(struct _Airport*);
 } _Airport;
 typedef _Airport *Airport;
 
 
-Airport newAirport(char code[3], int timezone, int latitude, int longitude, char *city, char *state);
-
-void toString();
+Airport newAirport(char code[4], int timezone, int latitude, int longitude, char *city, char *state);
 
 void newAirports(Airport airports [MAX_AIRPORTS]);
+
+void printAirport(Airport airport);
 
 #endif //AIRPORT_GRAPHS_SIMULATOR_AIRPORTS_H
