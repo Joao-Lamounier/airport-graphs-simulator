@@ -18,6 +18,10 @@ add_executable(airport_graphs_simulator
         structures/graph_matrix/GraphMatrix.c
         structures/graph_matrix/GraphMatrix.h
         structures/edge/Edge.c
-        structures/edge/Edge.h)
+        structures/edge/Edge.h
+        structures/graph_list/GraphList.c
+        structures/graph_list/GraphList.h
+        structures/array_list/ArrayList.c
+        structures/array_list/ArrayList.h)
 
 target_link_libraries(airport_graphs_simulator m)

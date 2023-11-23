@@ -10,12 +10,10 @@ char *readFile(const char *filename) {
         return NULL;
     }
 
-    // Determina o tamanho do arquivo
     fseek(file, 0, SEEK_END);
     long file_size = ftell(file);
     fseek(file, 0, SEEK_SET);
 
-    // Aloca memória para a string
     char *content = (char *)malloc(file_size + 1);
     if (content == NULL) {
         fclose(file);
@@ -23,7 +21,6 @@ char *readFile(const char *filename) {
         return NULL; // Retorna NULL indicando falha na alocação de memória
     }
 
-    // Lê o conteúdo do arquivo para a string
     fread(content, 1, file_size, file);
     content[file_size] = '\0'; // Adiciona o caractere nulo ao final da string
 

@@ -18,7 +18,7 @@ void newVertexes(Vertex vertexes[MAX_VERTEXES]) {
 }
 
 int *selectVertices(Vertex vertexes[MAX_VERTEXES], char v1[4], char v2[4]) {
-    int *position = (int *)malloc(2 * sizeof(int));
+    int *position = (int *) malloc(2 * sizeof(int));
 
     for (int i = 0; i < MAX_VERTEXES; ++i) {
         if (strcmp(vertexes[i]->airport->code, v1) == 0) {
@@ -28,5 +28,15 @@ int *selectVertices(Vertex vertexes[MAX_VERTEXES], char v1[4], char v2[4]) {
         }
     }
 
+    return position;
+}
+
+int designatePosition(Vertex vertexes[MAX_VERTEXES], char cod[4]) {
+    int position = -1;
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        if (strcmp(vertexes[i]->airport->code, cod) == 0) {
+            position = i;
+        }
+    }
     return position;
 }
