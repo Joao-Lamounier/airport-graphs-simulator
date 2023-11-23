@@ -1,7 +1,7 @@
 #include <malloc.h>
 #include <string.h>
-#include "airports.h"
-#include "../../files/readFile.h"
+#include "Airport.h"
+#include "../../files/ReadFile.h"
 
 Airport newAirport(char code[3], int timezone, int latitude, int longitude, char *city, char *state) {
     Airport airport = (Airport) malloc(sizeof(_Airport));
@@ -34,7 +34,8 @@ void newAirports(Airport airports[MAX_AIRPORTS]) {
         int timezone, latitude, longitude;
         char city[50], state[50];
 
-        if (sscanf(token, "%3s %d, %d, %d, %49[^,], %49[^\n]", code, &timezone, &latitude, &longitude, city, state) == 6) {
+        if (sscanf(token, "%3s %d, %d, %d, %49[^,], %49[^\n]", code, &timezone, &latitude, &longitude, city, state) ==
+            6) {
             code[3] = '\0';
 
             airports[count] = newAirport(code, timezone, latitude, longitude, strdup(city), strdup(state));
@@ -44,4 +45,3 @@ void newAirports(Airport airports[MAX_AIRPORTS]) {
         token = strtok(NULL, "\n");
     }
 }
-

@@ -55,35 +55,47 @@ build CMakeFiles/airport_graphs_simulator.dir/main.c.o: C_COMPILER__airport_grap
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir
 
-build CMakeFiles/airport_graphs_simulator.dir/entities/airports/airports.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/entities/airports/airports.c || cmake_object_order_depends_target_airport_graphs_simulator
-  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/entities/airports/airports.c.o.d
+build CMakeFiles/airport_graphs_simulator.dir/entities/airports/Airport.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/entities/airports/Airport.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/entities/airports/Airport.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/entities/airports
 
-build CMakeFiles/airport_graphs_simulator.dir/files/readFile.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/files/readFile.c || cmake_object_order_depends_target_airport_graphs_simulator
-  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/files/readFile.c.o.d
+build CMakeFiles/airport_graphs_simulator.dir/files/ReadFile.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/files/ReadFile.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/files/ReadFile.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/files
 
-build CMakeFiles/airport_graphs_simulator.dir/structures/vertex/vertex.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/structures/vertex/vertex.c || cmake_object_order_depends_target_airport_graphs_simulator
-  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/structures/vertex/vertex.c.o.d
+build CMakeFiles/airport_graphs_simulator.dir/structures/vertex/Vertex.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/structures/vertex/Vertex.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/structures/vertex/Vertex.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/structures/vertex
 
-build CMakeFiles/airport_graphs_simulator.dir/entities/routes/routes.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/entities/routes/routes.c || cmake_object_order_depends_target_airport_graphs_simulator
-  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/entities/routes/routes.c.o.d
+build CMakeFiles/airport_graphs_simulator.dir/entities/routes/Route.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/entities/routes/Route.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/entities/routes/Route.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/entities/routes
 
-build CMakeFiles/airport_graphs_simulator.dir/entities/flights/flights.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/entities/flights/flights.c || cmake_object_order_depends_target_airport_graphs_simulator
-  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/entities/flights/flights.c.o.d
+build CMakeFiles/airport_graphs_simulator.dir/entities/flights/Flight.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/entities/flights/Flight.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/entities/flights/Flight.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/entities/flights
+
+build CMakeFiles/airport_graphs_simulator.dir/structures/graph_matrix/GraphMatrix.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/structures/graph_matrix/GraphMatrix.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/structures/graph_matrix/GraphMatrix.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/structures/graph_matrix
+
+build CMakeFiles/airport_graphs_simulator.dir/structures/edge/Edge.c.o: C_COMPILER__airport_graphs_simulator_unscanned_Debug /home/joao/CLionProjects/airport-graphs-simulator/structures/edge/Edge.c || cmake_object_order_depends_target_airport_graphs_simulator
+  DEP_FILE = CMakeFiles/airport_graphs_simulator.dir/structures/edge/Edge.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/airport_graphs_simulator.dir/structures/edge
 
 
 # =============================================================================
@@ -93,8 +105,9 @@ build CMakeFiles/airport_graphs_simulator.dir/entities/flights/flights.c.o: C_CO
 #############################################
 # Link the executable airport_graphs_simulator
 
-build airport_graphs_simulator: C_EXECUTABLE_LINKER__airport_graphs_simulator_Debug CMakeFiles/airport_graphs_simulator.dir/main.c.o CMakeFiles/airport_graphs_simulator.dir/entities/airports/airports.c.o CMakeFiles/airport_graphs_simulator.dir/files/readFile.c.o CMakeFiles/airport_graphs_simulator.dir/structures/vertex/vertex.c.o CMakeFiles/airport_graphs_simulator.dir/entities/routes/routes.c.o CMakeFiles/airport_graphs_simulator.dir/entities/flights/flights.c.o
+build airport_graphs_simulator: C_EXECUTABLE_LINKER__airport_graphs_simulator_Debug CMakeFiles/airport_graphs_simulator.dir/main.c.o CMakeFiles/airport_graphs_simulator.dir/entities/airports/Airport.c.o CMakeFiles/airport_graphs_simulator.dir/files/ReadFile.c.o CMakeFiles/airport_graphs_simulator.dir/structures/vertex/Vertex.c.o CMakeFiles/airport_graphs_simulator.dir/entities/routes/Route.c.o CMakeFiles/airport_graphs_simulator.dir/entities/flights/Flight.c.o CMakeFiles/airport_graphs_simulator.dir/structures/graph_matrix/GraphMatrix.c.o CMakeFiles/airport_graphs_simulator.dir/structures/edge/Edge.c.o
   FLAGS = -g
+  LINK_LIBRARIES = -lm
   OBJECT_DIR = CMakeFiles/airport_graphs_simulator.dir
   POST_BUILD = :
   PRE_LINK = :

@@ -5,13 +5,19 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(airport_graphs_simulator
         main.c
-        entities/airports/airports.c
-        entities/airports/airports.h
-        files/readFile.c
-        files/readFile.h
-        structures/vertex/vertex.c
-        structures/vertex/vertex.h
-        entities/routes/routes.c
-        entities/routes/routes.h
-        entities/flights/flights.c
-        entities/flights/flights.h)
+        entities/airports/Airport.c
+        entities/airports/Airport.h
+        files/ReadFile.c
+        files/ReadFile.h
+        structures/vertex/Vertex.c
+        structures/vertex/Vertex.h
+        entities/routes/Route.c
+        entities/routes/Route.h
+        entities/flights/Flight.c
+        entities/flights/Flight.h
+        structures/graph_matrix/GraphMatrix.c
+        structures/graph_matrix/GraphMatrix.h
+        structures/edge/Edge.c
+        structures/edge/Edge.h)
+
+target_link_libraries(airport_graphs_simulator m)

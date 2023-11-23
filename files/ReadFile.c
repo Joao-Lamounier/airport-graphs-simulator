@@ -1,7 +1,7 @@
 #include <bits/types/FILE.h>
 #include <stdio.h>
 #include <malloc.h>
-#include "readFile.h"
+#include "ReadFile.h"
 
 char *readFile(const char *filename) {
     FILE *file = fopen(filename, "r");

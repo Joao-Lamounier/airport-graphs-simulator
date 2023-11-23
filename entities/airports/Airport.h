@@ -1,5 +1,5 @@
-#ifndef AIRPORT_GRAPHS_SIMULATOR_AIRPORTS_H
-#define AIRPORT_GRAPHS_SIMULATOR_AIRPORTS_H
+#ifndef AIRPORT_GRAPHS_SIMULATOR_AIRPORT_H
+#define AIRPORT_GRAPHS_SIMULATOR_AIRPORT_H
 
 #define MAX_AIRPORTS 23
 
@@ -13,7 +13,7 @@ typedef struct _Airport {
     char *city;
     char *state;
 
-    void (*toString)(struct _Airport*);
+    void (*toString)(struct _Airport *);
 } _Airport;
 typedef _Airport *Airport;
 
@@ -24,4 +24,4 @@ void newAirports(Airport airports [MAX_AIRPORTS]);
 
 void printAirport(Airport airport);
 
-#endif //AIRPORT_GRAPHS_SIMULATOR_AIRPORTS_H
+#endif //AIRPORT_GRAPHS_SIMULATOR_AIRPORT_H

@@ -1,7 +1,7 @@
 #include <malloc.h>
 #include <string.h>
-#include "routes.h"
-#include "../../files/readFile.h"
+#include "Route.h"
+#include "../../files/ReadFile.h"
 
 Route newRoute(char source[4], char target[4]) {
     Route route = (Route) malloc(sizeof(_Route));

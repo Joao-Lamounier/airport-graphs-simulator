@@ -10,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -25,6 +26,12 @@
 				"command" : 0,
 				"file" : 0,
 				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
 				"parent" : 0
 			}
 		]
@@ -54,7 +61,9 @@
 				3,
 				5,
 				7,
-				9
+				9,
+				11,
+				13
 			]
 		}
 	],
@@ -70,6 +79,11 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lm",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"
@@ -92,7 +106,9 @@
 				3,
 				5,
 				7,
-				9
+				9,
+				11,
+				13
 			]
 		},
 		{
@@ -103,7 +119,9 @@
 				4,
 				6,
 				8,
-				10
+				10,
+				12,
+				14
 			]
 		}
 	],
@@ -118,56 +136,78 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "entities/airports/airports.c",
+			"path" : "entities/airports/Airport.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "entities/airports/airports.h",
+			"path" : "entities/airports/Airport.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "files/readFile.c",
+			"path" : "files/ReadFile.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "files/readFile.h",
+			"path" : "files/ReadFile.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "structures/vertex/vertex.c",
+			"path" : "structures/vertex/Vertex.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "structures/vertex/vertex.h",
+			"path" : "structures/vertex/Vertex.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "entities/routes/routes.c",
+			"path" : "entities/routes/Route.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "entities/routes/routes.h",
+			"path" : "entities/routes/Route.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "entities/flights/flights.c",
+			"path" : "entities/flights/Flight.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "entities/flights/flights.h",
+			"path" : "entities/flights/Flight.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "structures/graph_matrix/GraphMatrix.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "structures/graph_matrix/GraphMatrix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "structures/edge/Edge.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "structures/edge/Edge.h",
 			"sourceGroupIndex" : 1
 		}
 	],
