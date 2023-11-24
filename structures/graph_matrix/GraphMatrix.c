@@ -4,17 +4,15 @@
 
 void setDefaultEdges(GraphRoutes graphRoutes);
 
-GraphRoutes newGraph(Vertex vertexes[MAX_VERTEXES]) {
+GraphRoutes newGraphRoutes(Vertex vertexes[23]) {
     GraphRoutes graph = (_Graph *) malloc(sizeof(_Graph));
-
-    newVertexes(vertexes);
 
     Route routes[MAX_ROUTES];
     newRoutes(routes);
 
 
     for (int i = 0; i < MAX_VERTEXES; ++i) {
-        graph->vertex[i] = vertexes[i];
+        graph->vertexes[i] = vertexes[i];
     }
 
     int *position;
@@ -46,8 +44,8 @@ void printRoutes(GraphRoutes graph) {
     for (int i = 0; i < MAX_VERTEXES; ++i) {
         for (int j = i + 1; j < MAX_VERTEXES; ++j) {
             if (graph->distances[i][j]->distance != -1) {
-                printf("\n🛫 Aeroporto: %s", graph->vertex[i]->airport->code);
-                printf("\n🛬 Aeroporto: %s", graph->vertex[j]->airport->code);
+                printf("\n🛫 Aeroporto: %s", graph->vertexes[i]->airport->code);
+                printf("\n🛬 Aeroporto: %s", graph->vertexes[j]->airport->code);
                 printf("\n🛣️ Distância: %.2f ", graph->distances[i][j]->distance);
                 printf("\n");
             }

@@ -18,7 +18,6 @@ void append(ArrayList list, Flight flight) {
 
 }
 
-//YV 11 ABQ 715A DEN 920A 1
 void newArrayLists(ArrayList lists[MAX_AIRPORTS], Vertex vertexes[MAX_VERTEXES]) {
     Flight flights[MAX_FLIGHTS];
     newFlights(flights);

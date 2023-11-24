@@ -8,50 +8,51 @@
 #include "structures/vertex/Vertex.h"
 #include "structures/graph_matrix/GraphMatrix.h"
 #include "structures/array_list/ArrayList.h"
+#include "structures/graph_list/GraphList.h"
+#include "utils/utils.h"
+#include "services/path_graph_service/PathGraphs.h"
 
+void mainMenu(int op);
 
 int main() {
-
     Vertex vertexes[MAX_VERTEXES];
     newVertexes(vertexes);
-//    GraphRoutes graphRoutes = newGraph(vertexes);
+
+    GraphRoutes graphRoutes = newGraphRoutes(vertexes);
+    GraphFlights graphFlights = newGraphFlights(vertexes);
+//
 //    graphRoutes->toString(graphRoutes);
+//    graphFlights->toString(graphFlights);
+//5.1
+    pathInGraph(graphRoutes);
 
-    ArrayList list[MAX_AIRPORTS];
-    newArrayLists(list, vertexes);
-    for (int i = 0; i < list[0]->size; ++i) {
-        printFlight(list[0]->flights[i]);
-        printf("\n");
-    }
-//    Flight flights[MAX_FLIGHTS];
-//    newFlights(flights);
+//    pathInGraph(graphRoutes);
 
-//    for (int i = 0; i < MAX_FLIGHTS; ++i) {
-//        append(list, flights[i]);
-//    }
-
-//    Vertex vertexes[23];
-//    newVertexes(vertexes);
-//
-//    for (int i = 0; i < 23; ++i) {
-//        printf("\n===========================\n");
-//        vertexes[i]->airport->toString(vertexes[i]->airport);
-//    }
-
-//    Route routes[34];
-//    newRoutes(routes);
-//    for (int i = 0; i < 34; ++i){
-//        routes[i]->toString(routes[i]);
-//        printf("\n");
-//    }
-//
-//    Flight flights[723];
-//    newFlights(flights);
-//
-//    for (int i = 0; i < 723; ++i) {
-//        flights[i]->toString(flights[i]);
-//        printf("\n");
-//    }
 
     return 0;
+}
+
+void mainMenu(int op) {
+
+    color(5);
+    printf("╔══════════════════════════════════════════════════════════════════════╗\n");
+    printf("║");
+    color(7);
+    printf("                             Bem-vindo ao                             ");
+    color(5);
+    printf("║\n║");
+    color(7);
+    printf("                               AeroGraph                              ");
+    color(5);
+    printf("║\n");
+    color(5);
+    printf("║");
+    color(8);
+    printf("               Controle Inteligente de Voos e Rotas Aéreas            ");
+    color(5);
+    printf("║\n");
+    printf("╚══════════════════════════════════════════════════════════════════════╝");
+
+    color(7);
+
 }
