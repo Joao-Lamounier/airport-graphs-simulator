@@ -10,7 +10,8 @@
 #include "structures/array_list/ArrayList.h"
 #include "structures/graph_list/GraphList.h"
 #include "utils/utils.h"
-#include "services/path_graph_service/PathGraphs.h"
+#include "services/path_graph_matrix_service/PathGraphsMatrix.h"
+#include "services/payh_graph_list_service/PathGraphList.h"
 
 void mainMenu(int op);
 
@@ -22,11 +23,13 @@ int main() {
     GraphFlights graphFlights = newGraphFlights(vertexes);
 //
 //    graphRoutes->toString(graphRoutes);
-//    graphFlights->toString(graphFlights);
+//   graphFlights->toString(graphFlights);
 //5.1
-    pathInGraph(graphRoutes);
-
 //    pathInGraph(graphRoutes);
+//5.2
+//    getDirectFlights(graphFlights);
+//5.3
+//    dijkstra(graphRoutes);
 
 
     return 0;

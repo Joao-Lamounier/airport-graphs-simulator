@@ -32,6 +32,8 @@ add_executable(airport_graphs_simulator
         structures/queue/queue.c
         structures/queue/queue.h
         services/payh_graph_list_service/PathGraphList.c
-        services/payh_graph_list_service/PathGraphList.h)
+        services/payh_graph_list_service/PathGraphList.h
+        services/payh_graph_list_service/PathGraphList.c
+        services/payh_graph_list_service/PathGraphList.c)
 
 target_link_libraries(airport_graphs_simulator m)
