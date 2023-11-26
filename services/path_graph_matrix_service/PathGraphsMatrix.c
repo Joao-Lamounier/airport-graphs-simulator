@@ -181,7 +181,30 @@ void DFSWithPath(GraphRoutes graph, int start, bool *visited, int path[], int *p
     }
 }
 
-bool accessToAll(GraphRoutes graphRoutes) {
+void airportDependencyAnalyst(GraphRoutes graphRoutes, int origin) {
+    int count;
+    printf("\n");
+            count = 0;
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        for (int j = 0; j < MAX_VERTEXES; ++j) {
+            if (i == origin) {
+                count = 1;
+                break;
+            }
+            if (graphRoutes->distances[i][j]->distance != -1) {
+                count++;
+            }
+        }
+        if (count == 1) {
+            printf("🗝️%s", graphRoutes->vertexes[i]->airport->code);
+        }
+    }
+}
+bool isHamiltoniano(GraphRoutes graphRoutes, int origin, int target){
+    return graphRoutes->distances[origin][target]->distance != -1;
+}
+
+bool accessToAll(GraphRoutes graphRoutes, bool verifyHamiltoniano) {
     char codOrigin[4];
     getCodeFromUser("origem", codOrigin);
 
@@ -216,7 +239,19 @@ bool accessToAll(GraphRoutes graphRoutes) {
         printf("%s", graphRoutes->vertexes[path[i]]->airport->code);
     }
 
+    if(!verifyHamiltoniano){
+        airportDependencyAnalyst(graphRoutes, position);
+    }else{
+        if(isHamiltoniano(graphRoutes, position, path[MAX_VERTEXES-1])){
+            printf("\nÉ Hamiltoniano");
+        } else{
+            printf("\nNão é Hamiltoniano");
+
+        }
+    }
 
     return true;
 }
+
+
 

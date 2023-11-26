@@ -8,6 +8,6 @@ void pathInGraph(GraphRoutes graph);
 
 void shortestWay(GraphRoutes graph, char *codOrigin, char *codTarget);
 
-bool accessToAll(GraphRoutes graphRoutes);
+bool accessToAll(GraphRoutes graphRoutes, bool verifyHamiltoniano);
 
 #endif //AIRPORT_GRAPHS_SIMULATOR_PATHGRAPHSMATRIX_H
