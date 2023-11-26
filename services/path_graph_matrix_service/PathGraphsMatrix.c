@@ -128,7 +128,7 @@ void showsShortestPath(GraphRoutes graph, int origin, int target, const int pred
 }
 
 
-void dijkstra(GraphRoutes graph,  char *codOrigin, char *codTarget) {
+void dijkstra(GraphRoutes graph, char *codOrigin, char *codTarget) {
     double distances[MAX_VERTEXES];
     int predecessors[MAX_VERTEXES];
     bool visited[MAX_VERTEXES];
@@ -162,9 +162,61 @@ void dijkstra(GraphRoutes graph,  char *codOrigin, char *codTarget) {
 void shortestWay(GraphRoutes graph, char *codOrigin, char *codTarget) {
     dijkstra(graph, codOrigin, codTarget);
 }
-bool accessToAll(GraphRoutes graphRoutes){
-    char codOrigin[4], codTarget[4];
-//    getCodeFromUser("origem", codOrigin);
-//    getCodeFromUser("destino", codTarget);
-    return false;
+
+void printPah(int path[], int length) {
+    for (int i = 0; i < length; ++i) {
+        printf("%d ", path[i]);
+    }
+    printf("\n");
 }
+
+void DFSWithPath(GraphRoutes graph, int start, bool *visited, int path[], int *pathLength) {
+    visited[start] = true;
+    path[(*pathLength)++] = start;
+
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        if (graph->distances[start][i]->distance != -1 && !visited[i]) {
+            DFSWithPath(graph, i, visited, path, pathLength);
+        }
+    }
+}
+
+bool accessToAll(GraphRoutes graphRoutes) {
+    char codOrigin[4];
+    getCodeFromUser("origem", codOrigin);
+
+    int position = designatePosition(graphRoutes->vertexes, codOrigin);
+
+    if (position == -1) {
+        printf("Código de origem inválido.\n");
+        return false;
+    }
+
+    bool visited[MAX_VERTEXES];
+    memset(visited, false, sizeof(visited));
+
+    int path[MAX_VERTEXES];
+    int pathLength = 0;
+
+    DFSWithPath(graphRoutes, position, visited, path, &pathLength);
+
+
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        if (!visited[i]) {
+            return false;
+        }
+    }
+    printf("Caminho percorrido: ");
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        if (i == 0) {
+            printf("🛫");
+        } else if (i == MAX_VERTEXES - 1) {
+            printf(" 🛬");
+        } else printf(" ➡️ ");
+        printf("%s", graphRoutes->vertexes[path[i]]->airport->code);
+    }
+
+
+    return true;
+}
+

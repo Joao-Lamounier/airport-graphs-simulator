@@ -36,6 +36,9 @@ int main() {
 //    shortestWay(graphRoutes, codOrigin, codTarget);
 //    shortestPathTime(graphFlights, codOrigin, codTarget);
 //5.4
+if(accessToAll(graphRoutes)){
+    printf("\nSim");
+} else printf("\nNão");
 
     return 0;
 }
