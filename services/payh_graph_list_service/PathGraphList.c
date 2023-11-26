@@ -2,10 +2,12 @@
 #include <stdio.h>
 #include <float.h>
 #include <limits.h>
+#include <string.h>
 #include "PathGraphList.h"
 #include "../../structures/graph_list/GraphList.h"
 #include "../airports_service/AirportsServices.h"
 #include "../../structures/graph_matrix/GraphMatrix.h"
+#include "../../utils/utils.h"
 
 void getDirectFlights(GraphFlights graph) {
     char code[4];
@@ -30,81 +32,44 @@ void getDirectFlights(GraphFlights graph) {
     }
 }
 
-void initialize(GraphRoutes graph, double distances[], int predecessors[]) {
-    for (int i = 0; i < MAX_VERTEXES; i++) {
-        distances[i] = DBL_MAX;
-        predecessors[i] = -1;
-    }
+int getFlightDuration(GraphFlights graphFlights, char *origin, char *destin, int nFlights) {
+
+    char h1[6];
+    char h2[6];
+    int a1 = designatePosition(graphFlights->vertexes, origin);
+    int a2 = designatePosition(graphFlights->vertexes, destin);
+
+
+    timeZoneToUTC(graphFlights->lists[a1]->flights[nFlights]->departure, h1,
+                  graphFlights->vertexes[a1]->airport->timezone);
+    timeZoneToUTC(graphFlights->lists[a1]->flights[nFlights]->arrival, h2,
+                  graphFlights->vertexes[a2]->airport->timezone);
+
+    return timeDifference(h1, h2);
 }
 
-double extractMin(const double distances[], const bool visited[], int n) {
-    double min = DBL_MAX, min_index;
+void shortestPathTime(GraphFlights graphFlights, char *codOrigin, char *codTarget) {
 
-    for (int v = 0; v < n; v++) {
-        if (!visited[v] && distances[v] < min) {
-            min = distances[v];
-            min_index = v;
-        }
-    }
+    int position = designatePosition(graphFlights->vertexes, codOrigin);
 
-    return min_index;
-}
-
-void relax(GraphRoutes graph, int u, int v, double distances[], int predecessors[]) {
-    if (distances[v] > distances[u] + graph->distances[u][v]->distance) {
-        distances[v] = distances[u] + graph->distances[u][v]->distance;
-        predecessors[v] = u;
-    }
-}
-
-void dijkstra(GraphRoutes graph) {
-    double distances[MAX_VERTEXES];
-    int predecessors[MAX_VERTEXES];
-    bool visited[MAX_VERTEXES];
-
-    int n = MAX_VERTEXES;
-
-    char codOrigin[4], codTarget[4];
-    getCodeFromUser("origem", codOrigin);
-    getCodeFromUser("destino", codTarget);
-
-    int origin = designatePosition(graph->vertexes, codOrigin);
-    int target = designatePosition(graph->vertexes, codTarget);
-
-    initialize(graph, distances, predecessors);
-
-    distances[origin] = 0;
-
-    for (int count = 0; count < n - 1; count++) {
-        int u = (int) extractMin(distances, visited, n);
-
-        visited[u] = true;
-
-        for (int v = 0; v < n; v++) {
-            if (!visited[v] && graph->distances[u][v]->distance != -1) {
-                relax(graph, u, v, distances, predecessors);
+    int smaller = -1;
+    int current;
+    int index = -1;
+    for (int i = 0; i < graphFlights->lists[position]->size; ++i) {
+        if (strcmp(graphFlights->lists[position]->flights[i]->target, codTarget) == 0) {
+            current = getFlightDuration(graphFlights, codOrigin, codTarget, i);
+            if (current < smaller || smaller == -1) {
+                index = i;
+                smaller = current;
             }
         }
     }
-
-    printf("✈️ Menor caminho de %s para %s: %.2f\n", codOrigin, codTarget, distances[target]);
-
-    printf("Caminho: ");
-    int current = target;
-    bool first = true;
-    int next = 0;
-    while (current != -1) {
-        int copy = predecessors[current];
-        if (first) {
-            printf("🛫");
-            first = false;
-        } else if (copy == -1) {
-            printf(" 🛬");
-        } else if (current != target) {
-            printf(" ➡️ ");
-        }
-        printf("%s ", graph->vertexes[current]->airport->code);
-        current = predecessors[current];
+    if (smaller != -1) {
+        char hour[6];
+        convertMinutesToHours(hour, smaller);
+        printf("\n");
+        graphFlights->lists[position]->flights[index]->toString(graphFlights->lists[position]->flights[index]);
+        printf("Menor tempo de voo: %s", hour);
     }
 
 }

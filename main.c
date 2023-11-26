@@ -12,6 +12,7 @@
 #include "utils/utils.h"
 #include "services/path_graph_matrix_service/PathGraphsMatrix.h"
 #include "services/payh_graph_list_service/PathGraphList.h"
+#include "services/airports_service/AirportsServices.h"
 
 void mainMenu(int op);
 
@@ -29,8 +30,12 @@ int main() {
 //5.2
 //    getDirectFlights(graphFlights);
 //5.3
-//    dijkstra(graphRoutes);
-
+//    char codOrigin[4], codTarget[4];
+//    getCodeFromUser("origem", codOrigin);
+//    getCodeFromUser("destino", codTarget);
+//    shortestWay(graphRoutes, codOrigin, codTarget);
+//    shortestPathTime(graphFlights, codOrigin, codTarget);
+//5.4
 
     return 0;
 }

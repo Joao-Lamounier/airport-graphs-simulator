@@ -15,4 +15,5 @@ GraphFlights newGraphFlights(Vertex vertexes[MAX_VERTEXES]);
 
 void printFlights(GraphFlights graph);
 
+
 #endif //AIRPORT_GRAPHS_SIMULATOR_GRAPHLIST_H
