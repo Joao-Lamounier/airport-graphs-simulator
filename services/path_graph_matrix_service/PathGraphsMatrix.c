@@ -197,8 +197,9 @@ void airportDependencyAnalyst(GraphRoutes graphRoutes, int origin) {
             }
         }
         if (count == 1) {
-            printf("🗝️%s", graphRoutes->vertexes[i]->airport->code);
+            printf("🗝️%s" , graphRoutes->vertexes[i]->airport->code);
         }
+        count = 0;
     }
 }
 

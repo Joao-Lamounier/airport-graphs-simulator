@@ -62,7 +62,8 @@ bool mainMenu(GraphRoutes graphRoutes, GraphFlights graphFlights, bool *initial)
         initialSound();
         printHeader();
         color(4);
-        animateText("\n\n                      Inicializando módulos...");
+        printf("\n\n                      ");
+        animateText("Inicializando módulos...");
         color(9);
         usleep(500000);
         printf("\n\n");
@@ -76,7 +77,8 @@ bool mainMenu(GraphRoutes graphRoutes, GraphFlights graphFlights, bool *initial)
     if (option == 8) {
         finalSound();
         color(4);
-        animateText("\n\n                    Saindo do programa. Até logo!\n\n");
+        printf("\n\n                    ");
+        animateText("Saindo do programa. Até logo!\n\n");
         usleep(500000);
         return false;
     }
