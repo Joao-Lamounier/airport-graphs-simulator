@@ -86,3 +86,25 @@ A arquitetura em camadas do AeroGraph proporcionou uma base sólida para a imple
 A transparência e abrangência do sistema, evidenciadas pela exibição de todas as rotas e voos disponíveis, reforçam a proposta de oferecer ao usuário uma visão completa das opções de viagem. A integração inteligente de estruturas de dados e algoritmos contribuiu para a robustez do programa, tornando-o capaz de lidar com a complexidade inerente às operações aéreas.
 
 Em última análise, o AeroGraph representa não apenas um sistema de controle de voos e rotas, mas uma abordagem inteligente e eficaz para a gestão aérea. A compreensão das escolhas algorítmicas e estruturais destaca a engenhosidade por trás do desenvolvimento, oferecendo aos usuários uma ferramenta que não apenas atende às suas necessidades imediatas, mas que também está preparada para evoluir e enfrentar os desafios em constante mudança do cenário aéreo.
+
+1. **Carvalho, Bruno Miguel Pacheco Saraiva de**. *Algoritmo de Dijkstra.*  
+   Departamento de Engenharia Informática, Universidade de Coimbra, 3030 Coimbra, Portugal.  
+   Email: brunomig@student.dei.uc.pt.  
+   [Artigo](https://student.dei.uc.pt/~brunomig/cp/Artigo.pdf)
+
+2. **Bilésimo, Vanessa Felisberto; Porfírio, Patrícia José; da Silva, Westphal; Sim, Priscyla Waleska Targino de Azevedo; Azevedo, Silvana Campos de**.  
+   *Implementação do algoritmo de busca em profundidade em um grafo: Utilização da Biblioteca Padrão do C++ - STL.*  
+   [Artigo](https://www.periodicos.unesc.net/ojs/index.php/sulcomp/article/view/910)
+
+3. **Mexas, Mirian Picinini**.  
+   *Um Estudo sobre Técnicas de Busca em Grafos e Suas Aplicações.*  
+   [Artigo](https://www.pesc.coppe.ufrj.br/uploadfile/1368208720.pdf)
+
+4. **Feofiloff, Paulo**.  
+   *Busca em Largura.*  
+   [Artigo](https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/bfs.html)
+
+---
+
+*Autor: João Felipe Silva Lamounier*
+
