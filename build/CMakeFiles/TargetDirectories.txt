@@ -1,3 +1,0 @@
-/home/joao/CLionProjects/airport-graphs-simulator/build/CMakeFiles/airport_graphs_simulator.dir
-/home/joao/CLionProjects/airport-graphs-simulator/build/CMakeFiles/edit_cache.dir
-/home/joao/CLionProjects/airport-graphs-simulator/build/CMakeFiles/rebuild_cache.dir
