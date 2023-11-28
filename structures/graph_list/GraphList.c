@@ -2,6 +2,17 @@
 #include "GraphList.h"
 #include "../../services/airports_service/AirportsServices.h"
 
+void printFlights(GraphFlights graph) {
+    int count = 0;
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        for (int j = 0; j < graph->lists[i]->size; ++j) {
+            printf("\n-----------------------\n");
+            graph->lists[i]->flights[j]->toString(graph->lists[i]->flights[j]);
+            count++;
+        }
+    }
+}
+
 GraphFlights newGraphFlights(Vertex vertexes[MAX_VERTEXES]) {
     GraphFlights graph = (_GraphList *) malloc(sizeof(_GraphList));
 
@@ -18,17 +29,6 @@ GraphFlights newGraphFlights(Vertex vertexes[MAX_VERTEXES]) {
     graph->toString = printFlights;
 
     return graph;
-}
-
-void printFlights(GraphFlights graph) {
-    int count = 0;
-    for (int i = 0; i < MAX_VERTEXES; ++i) {
-        for (int j = 0; j < graph->lists[i]->size; ++j) {
-            printf("\n-----------------------\n");
-            graph->lists[i]->flights[j]->toString(graph->lists[i]->flights[j]);
-            count++;
-        }
-    }
 }
 
 

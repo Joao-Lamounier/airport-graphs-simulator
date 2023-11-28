@@ -3,6 +3,16 @@
 #include "Flight.h"
 #include "../../files/ReadFile.h"
 
+void printFlight(Flight flight) {
+    printf("✈️ Companhia Aérea: %s\n", flight->airLine);
+    printf("🔢 Voo: %d\n", flight->idFlight);
+    printf("🛫 Origem: %s\n", flight->source);
+    printf("🕒 Horário de Partida: %s\n", flight->departure);
+    printf("🛬 Destino: %s\n", flight->target);
+    printf("🕙 Horário de Chegada: %s\n", flight->arrival);
+    printf("🛑 Paradas: %d\n", flight->stops);
+}
+
 Flight
 newFlight(char airLine[4], int idFlight, char source[4], char *departure, char target[4], char *arrival,
           int stops) {
@@ -17,16 +27,6 @@ newFlight(char airLine[4], int idFlight, char source[4], char *departure, char t
     flight->toString = printFlight;
 
     return flight;
-}
-
-void printFlight(Flight flight) {
-    printf("✈️ Companhia Aérea: %s\n", flight->airLine);
-    printf("🔢 Voo: %d\n", flight->idFlight);
-    printf("🛫 Origem: %s\n", flight->source);
-    printf("🕒 Horário de Partida: %s\n", flight->departure);
-    printf("🛬 Destino: %s\n", flight->target);
-    printf("🕙 Horário de Chegada: %s\n", flight->arrival);
-    printf("🛑 Paradas: %d\n", flight->stops);
 }
 
 void newFlights(Flight flights[MAX_FLIGHTS]) {

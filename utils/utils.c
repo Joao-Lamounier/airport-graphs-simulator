@@ -97,15 +97,15 @@ void timeZoneToUTC(const char *input, char *output, int timeZone) {
     addTime(output, output, timeZone);
 }
 
-int tempoParaMinutos(const char *hora) {
+int hoursForMinutes(const char *hora) {
     int horas, minutos;
     sscanf(hora, "%d:%d", &horas, &minutos);
     return horas * 60 + minutos;
 }
 
 int timeDifference(const char *h1, const char *h2) {
-    int minutos_h1 = tempoParaMinutos(h1);
-    int minutos_h2 = tempoParaMinutos(h2);
+    int minutos_h1 = hoursForMinutes(h1);
+    int minutos_h2 = hoursForMinutes(h2);
 
 
     int diferenca_minutos = minutos_h2 - minutos_h1;

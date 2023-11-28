@@ -4,6 +4,20 @@
 
 void setDefaultEdges(GraphRoutes graphRoutes);
 
+void printRoutes(GraphRoutes graph) {
+
+    for (int i = 0; i < MAX_VERTEXES; ++i) {
+        for (int j = i + 1; j < MAX_VERTEXES; ++j) {
+            if (graph->distances[i][j]->distance != -1) {
+                printf("\n🛫 Aeroporto: %s", graph->vertexes[i]->airport->code);
+                printf("\n🛬 Aeroporto: %s", graph->vertexes[j]->airport->code);
+                printf("\n🛣️ Distância: %.2f ", graph->distances[i][j]->distance);
+                printf("\n");
+            }
+        }
+    }
+}
+
 GraphRoutes newGraphRoutes(Vertex vertexes[23]) {
     GraphRoutes graph = (_Graph *) malloc(sizeof(_Graph));
 
@@ -34,20 +48,6 @@ void setDefaultEdges(GraphRoutes graphRoutes) {
             if (graphRoutes->distances[i][j] == NULL) {
                 graphRoutes->distances[i][j] = newEdge(NULL, NULL);
                 graphRoutes->distances[j][i] = newEdge(NULL, NULL);
-            }
-        }
-    }
-}
-
-void printRoutes(GraphRoutes graph) {
-
-    for (int i = 0; i < MAX_VERTEXES; ++i) {
-        for (int j = i + 1; j < MAX_VERTEXES; ++j) {
-            if (graph->distances[i][j]->distance != -1) {
-                printf("\n🛫 Aeroporto: %s", graph->vertexes[i]->airport->code);
-                printf("\n🛬 Aeroporto: %s", graph->vertexes[j]->airport->code);
-                printf("\n🛣️ Distância: %.2f ", graph->distances[i][j]->distance);
-                printf("\n");
             }
         }
     }

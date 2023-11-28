@@ -3,6 +3,15 @@
 #include "Airport.h"
 #include "../../files/ReadFile.h"
 
+void printAirport(Airport airport) {
+    printf("🔢 Código: %s\n", airport->code);
+    printf("🕒 Fuso Horário: %d\n", airport->timezone);
+    printf("🌐 Latitude: %d\n", airport->latitude);
+    printf("🌐 Longitude: %d\n", airport->longitude);
+    printf("📍 Cidade: %s\n", airport->city);
+    printf("📍 Estado: %s\n", airport->state);
+}
+
 Airport newAirport(char code[3], int timezone, int latitude, int longitude, char *city, char *state) {
     Airport airport = (Airport) malloc(sizeof(_Airport));
     strcpy(airport->code, code);
@@ -13,15 +22,6 @@ Airport newAirport(char code[3], int timezone, int latitude, int longitude, char
     airport->state = state;
     airport->toString = printAirport;
     return airport;
-}
-
-void printAirport(Airport airport) {
-    printf("🔢 Código: %s\n", airport->code);
-    printf("🕒 Fuso Horário: %d\n", airport->timezone);
-    printf("🌐 Latitude: %d\n", airport->latitude);
-    printf("🌐 Longitude: %d\n", airport->longitude);
-    printf("📍 Cidade: %s\n", airport->city);
-    printf("📍 Estado: %s\n", airport->state);
 }
 
 void newAirports(Airport airports[MAX_AIRPORTS]) {

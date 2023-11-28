@@ -84,7 +84,8 @@ void initialize(GraphRoutes graph, double distances[], int predecessors[]) {
 }
 
 double extractMin(const double distances[], const bool visited[], int n) {
-    double min = DBL_MAX, min_index;
+    double min = DBL_MAX;
+    double min_index = -1;  // Initialize min_index to a value indicating no minimum found
 
     for (int v = 0; v < n; v++) {
         if (!visited[v] && distances[v] < min) {
@@ -184,7 +185,7 @@ void DFSWithPath(GraphRoutes graph, int start, bool *visited, int path[], int *p
 void airportDependencyAnalyst(GraphRoutes graphRoutes, int origin) {
     int count;
     printf("\n");
-            count = 0;
+    count = 0;
     for (int i = 0; i < MAX_VERTEXES; ++i) {
         for (int j = 0; j < MAX_VERTEXES; ++j) {
             if (i == origin) {
@@ -200,7 +201,8 @@ void airportDependencyAnalyst(GraphRoutes graphRoutes, int origin) {
         }
     }
 }
-bool isHamiltoniano(GraphRoutes graphRoutes, int origin, int target){
+
+bool isHamiltoniano(GraphRoutes graphRoutes, int origin, int target) {
     return graphRoutes->distances[origin][target]->distance != -1;
 }
 
@@ -239,12 +241,12 @@ bool accessToAll(GraphRoutes graphRoutes, bool verifyHamiltoniano) {
         printf("%s", graphRoutes->vertexes[path[i]]->airport->code);
     }
 
-    if(!verifyHamiltoniano){
+    if (!verifyHamiltoniano) {
         airportDependencyAnalyst(graphRoutes, position);
-    }else{
-        if(isHamiltoniano(graphRoutes, position, path[MAX_VERTEXES-1])){
+    } else {
+        if (isHamiltoniano(graphRoutes, position, path[MAX_VERTEXES - 1])) {
             printf("\nÉ Hamiltoniano");
-        } else{
+        } else {
             printf("\nNão é Hamiltoniano");
 
         }

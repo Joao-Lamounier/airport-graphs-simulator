@@ -12,7 +12,6 @@ Queue *createQueue() {
     return queue;
 }
 
-// Função para enfileirar um elemento
 void enqueue(Queue *queue, int data) {
     QueueNode *newNode = (QueueNode *) malloc(sizeof(QueueNode));
     if (!newNode) {
@@ -30,7 +29,6 @@ void enqueue(Queue *queue, int data) {
     }
 }
 
-// Função para desenfileirar um elemento
 int dequeue(Queue *queue) {
     if (queue->front == NULL) {
         fprintf(stderr, "Fila vazia\n");
@@ -50,7 +48,6 @@ int dequeue(Queue *queue) {
     return data;
 }
 
-// Função para verificar se a fila está vazia
 bool isEmpty(Queue *queue) {
     return queue->front == NULL;
 }

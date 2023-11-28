@@ -11,9 +11,13 @@ typedef struct _GraphList{
 
 typedef _GraphList *GraphFlights;
 
+/**
+ * Cria um novo grafo de voos com base em um array de vértices.
+ *
+ * @param vertexes Array de vértices associados aos aeroportos.
+ * @return Novo grafo de voos alocado dinamicamente.
+ */
 GraphFlights newGraphFlights(Vertex vertexes[MAX_VERTEXES]);
-
-void printFlights(GraphFlights graph);
 
 
 #endif //AIRPORT_GRAPHS_SIMULATOR_GRAPHLIST_H

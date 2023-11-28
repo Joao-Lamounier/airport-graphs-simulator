@@ -14,15 +14,15 @@ char *readFile(const char *filename) {
     long file_size = ftell(file);
     fseek(file, 0, SEEK_SET);
 
-    char *content = (char *)malloc(file_size + 1);
+    char *content = (char *) malloc(file_size + 1);
     if (content == NULL) {
         fclose(file);
         fprintf(stderr, "Erro ao alocar memória para o conteúdo do arquivo\n");
-        return NULL; // Retorna NULL indicando falha na alocação de memória
+        return NULL;
     }
 
     fread(content, 1, file_size, file);
-    content[file_size] = '\0'; // Adiciona o caractere nulo ao final da string
+    content[file_size] = '\0';
 
     fclose(file);
     return content;

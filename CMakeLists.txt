@@ -34,6 +34,10 @@ add_executable(airport_graphs_simulator
         services/payh_graph_list_service/PathGraphList.c
         services/payh_graph_list_service/PathGraphList.h
         services/payh_graph_list_service/PathGraphList.c
-        services/payh_graph_list_service/PathGraphList.c)
+        services/payh_graph_list_service/PathGraphList.c
+        views/menu.c
+        views/menu.h
+        sounds/soundManipulator.c
+        sounds/soundManipulator.h)
 
 target_link_libraries(airport_graphs_simulator m)
