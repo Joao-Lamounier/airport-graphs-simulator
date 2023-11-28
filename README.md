@@ -87,6 +87,7 @@ A transparência e abrangência do sistema, evidenciadas pela exibição de toda
 
 Em última análise, o AeroGraph representa não apenas um sistema de controle de voos e rotas, mas uma abordagem inteligente e eficaz para a gestão aérea. A compreensão das escolhas algorítmicas e estruturais destaca a engenhosidade por trás do desenvolvimento, oferecendo aos usuários uma ferramenta que não apenas atende às suas necessidades imediatas, mas que também está preparada para evoluir e enfrentar os desafios em constante mudança do cenário aéreo.
 
+### Referências
 1. **Carvalho, Bruno Miguel Pacheco Saraiva de**. *Algoritmo de Dijkstra.*  
    Departamento de Engenharia Informática, Universidade de Coimbra, 3030 Coimbra, Portugal.  
    Email: brunomig@student.dei.uc.pt.  
