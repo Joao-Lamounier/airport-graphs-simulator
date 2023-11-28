@@ -2,7 +2,7 @@
 # AEROGRAPH
 ![airport](documentation/mapaRotas.png)
 
-## Introdução
+## INTRODUÇÃO
 A eficiente gestão de horários e rotas das companhias aéreas demanda uma abordagem estruturada e intuitiva. Na modelagem dessa complexidade logística, os grafos desempenham um papel crucial, representando cidades/aeroportos como vértices e rotas/voos como arestas. Duas representações principais, Grafo de Listas de Adjacências e Grafo de Matriz de Adjacências, são empregadas para otimizar diferentes contextos, como voos diretos e rotas entre todos os aeroportos.
 
 Este trabalho apresenta o AeroGraph, um sistema projetado para o controle inteligente de voos e rotas aéreas. A arquitetura em camadas do AeroGraph busca promover a manutenção e extensibilidade do sistema.
